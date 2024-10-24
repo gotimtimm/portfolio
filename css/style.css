@@ -43,7 +43,7 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 220px; /* Creates a gap of 20px between the sidebar and main content */
+  margin-left: 230px; /* Creates a gap of 20px between the sidebar and main content */
   flex: 1;
   padding: 20px;
 }
