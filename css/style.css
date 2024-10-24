@@ -43,7 +43,7 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 300px; /* Creates a gap of 20px between the sidebar and main content */
+  margin-left: 250px; /* Creates a gap of 20px between the sidebar and main content */
   flex: 1;
   padding: 20px;
 }
@@ -115,17 +115,21 @@ body {
 
 .overlay-content {
   background-color: #282828;
-  padding: 20px;
+  padding: 30px; /* Increased padding for better spacing */
   border-radius: 8px;
-  width: 400px;
-  text-align: justify; /* Justify text inside popup */
+  width: 600px; /* Make the popup larger */
+  text-align: justify;
   color: #b3b3b3;
   transform: scale(0.9);
   transition: transform 0.3s ease;
+  max-height: 80vh; /* Ensures popup doesn't overflow the screen */
+  overflow-y: auto; /* Scroll if content overflows */
 }
 
 .overlay img {
-  width: 100%;
+  float: left; /* Align the image to the left */
+  margin-right: 20px; /* Add space between the image and the text */
+  width: 200px; /* Control the size of the image */
   border-radius: 8px;
 }
 
@@ -155,3 +159,4 @@ body {
 .overlay-content.active {
   transform: scale(1); /* Smooth zoom-in effect */
 }
+
