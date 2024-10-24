@@ -120,6 +120,8 @@ body {
   width: 600px; /* Make the popup larger */
   text-align: justify;
   color: #b3b3b3;
+  display: flex; /* Use Flexbox for layout */
+  align-items: center; /* Align items vertically */
   transform: scale(0.9);
   transition: transform 0.3s ease;
   max-height: 80vh; /* Ensures popup doesn't overflow the screen */
@@ -127,14 +129,15 @@ body {
 }
 
 .overlay img {
-  float: left; /* Align the image to the left */
-  margin-right: 20px; /* Add space between the image and the text */
   width: 200px; /* Control the size of the image */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
+  margin-left: 20px; /* Space between text and image */
 }
 
 .overlay h2, .overlay p {
   color: #ffffff;
+  flex: 1; /* Allow text to take remaining space */
 }
 
 .close-btn {
