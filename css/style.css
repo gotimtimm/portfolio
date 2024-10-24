@@ -12,8 +12,8 @@ body {
   background-color: #282828;
   padding: 20px;
   width: 200px;
-  height: 100vh; 
-  position: fixed; 
+  height: 100vh; /* Full height */
+  position: fixed; /* Fixed position to make it stay on the side */
   top: 0;
   left: 0;
 }
@@ -43,7 +43,7 @@ body {
 
 /* Main Content */
 .main-content {
-  margin-left: 230px; /* Adjust this margin based on sidebar width */
+  margin-left: 220px; /* Creates a gap of 20px between the sidebar and main content */
   flex: 1;
   padding: 20px;
 }
