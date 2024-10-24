@@ -3,28 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Timothy Go</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- Optional: Add a font -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="#">Project 1</a></li>
-      <li><a href="#">Project 2</a></li>
-      <li><a href="#">Project 3</a></li>
-    </ul>
-  </div>
-
   <!-- Main Content -->
   <div class="main-content">
     <!-- Top Navbar -->
     <nav class="top-nav">
-      <h1>My Portfolio</h1>
+      <h1>Timothy Aaron S. Go</h1>
       <input type="text" placeholder="Search Projects...">
     </nav>
 
@@ -32,51 +20,63 @@
     <div class="projects">
       <div class="project-card" onclick="openOverlay('overlay-about')">
         <h3>About Me</h3>
-        <p>...</p>
+        <p>A short introduction about me!</p>
       </div>
 
       <div class="project-card" onclick="openOverlay('overlay-project1')">
-        <h3>Project 1</h3>
-        <p>A brief description of Project 1...</p>
+        <h3>Shuttle Service</h3>
+        <p>A shuttle service ticketing system from Manila to Laguna.</p>
       </div>
 
       <div class="project-card" onclick="openOverlay('overlay-project2')">
-        <h3>Project 2</h3>
-        <p>A brief description of Project 2...</p>
+        <h3>Megamastermind</h3>
+        <p>A color code-breaking game.</p>
       </div>
     </div>
   </div>
 
   <!-- Overlays -->
-<div id="overlay-about" class="overlay">
-  <div class="overlay-content">
-    <span class="close-btn" onclick="closeOverlay('overlay-about')">&times;</span>
-    <div>
-      <h2>About Me</h2>
-      <p>I am Timothy Aaron S. Go, a second-year student in De La Salle University pursuing a Bachelor of Science in Computer Science
-        Majoring in Software Technology. Although I am still new to programming, I am actively expanding my skill set, focusing on C,
-        HTML, CSS, and Java. I apply what I learn through personal projects, such as this website, and coursework, continuously 
-        enhancing my understanding of programming concepts and development practices.</p>
+  <div id="overlay-about" class="overlay">
+    <div class="overlay-content">
+      <span class="close-btn" onclick="closeOverlay('overlay-about')">&times;</span>
+      <div>
+        <h2>About Me</h2>
+        <p>
+          I am <span class="inline-highlight">Timothy Aaron S. Go</span>, a second-year student in De La Salle University pursuing a 
+          <span class="inline-highlight">Bachelor of Science in Computer Science Majoring in Software Technology</span>. Although I am 
+          still new to programming, I am actively expanding my skill set, focusing on <span class="inline-highlight">C, HTML, CSS, and 
+          Java</span>. I apply what I learn through personal projects, such as this website, and coursework, continuously enhancing my 
+          understanding of programming concepts and development practices.
+        </p>
+      </div>
+      <img src="images/timothy.jpg" alt="Timothy">
     </div>
-    <img src="images/pup.png" alt="pup">
   </div>
-</div>
 
   <div id="overlay-project1" class="overlay">
     <div class="overlay-content">
       <span class="close-btn" onclick="closeOverlay('overlay-project1')">&times;</span>
-      <h2>Project 1</h2>
-      <p>Detailed information about Project 1...</p>
-      <img src="images/project1.png" alt="Project 1 Screenshot">
+      <h2>Shuttle Service</h2>
+      <p>
+        This program is a shuttle service ticketing system that allows the agent
+        to book tickets from Manila to Laguna and vice versa. It also allows the
+        agent to cancel a booking and to update the shuttle service's schedule.
+        <a href="downloads/GO_shuttleservice.c" class="download-btn" download>Download</a>
+      </p>
     </div>
   </div>
 
   <div id="overlay-project2" class="overlay">
     <div class="overlay-content">
       <span class="close-btn" onclick="closeOverlay('overlay-project2')">&times;</span>
-      <h2>Project 2</h2>
-      <p>Detailed information about Project 2...</p>
-      <img src="images/project2.png" alt="Project 2 Screenshot">
+      <h2>Megamastermind</h2>
+      <p>
+        The objective of Mastermind is to guess a secret code consisting of a series of 4
+        colored pegs. Each guess results in feedback narrowing down the possibilities of the
+        code. The winner is the player who solves his opponent's secret code with fewer
+        guesses.
+        <a href="downloads/myProgram.exe" class="download-btn" download>Download</a>
+      </p>
     </div>
   </div>
 

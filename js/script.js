@@ -1,9 +1,5 @@
-// script.js
-
-// Placeholder for future interactivity
 console.log("Portfolio website ready!");
 
-// Function to open the overlay with smooth transition
 function openOverlay(overlayId) {
   const overlay = document.getElementById(overlayId);
   const overlayContent = overlay.querySelector('.overlay-content');
@@ -11,7 +7,6 @@ function openOverlay(overlayId) {
   overlayContent.classList.add('active');
 }
 
-// Function to close the overlay with smooth transition
 function closeOverlay(overlayId) {
   const overlay = document.getElementById(overlayId);
   const overlayContent = overlay.querySelector('.overlay-content');
@@ -19,3 +14,21 @@ function closeOverlay(overlayId) {
   overlay.classList.remove('active');
 }
 
+function filterProjects() {
+  const searchInput = document.querySelector('.top-nav input').value.toLowerCase();
+  const projectCards = document.querySelectorAll('.project-card');
+
+  projectCards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const description = card.querySelector('p').textContent.toLowerCase();
+    
+    if (title.includes(searchInput) || description.includes(searchInput)) {
+      card.style.display = '';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+const searchInput = document.querySelector('.top-nav input');
+searchInput.addEventListener('input', filterProjects);

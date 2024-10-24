@@ -1,59 +1,27 @@
 /* Global Styles */
 body {
-  background-color: #121212;
+  background: url('../images/bluehorizon.png') no-repeat center center fixed;
+  background-size: cover;
   color: #ffffff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
   margin: 0;
   display: flex;
 }
 
-/* Sidebar */
-.sidebar {
-  background-color: #282828;
-  padding: 20px;
-  width: 200px;
-  height: 100vh; /* Full height */
-  position: fixed; /* Fixed position to make it stay on the side */
-  top: 0;
-  left: 0;
-}
-
-.sidebar h2 {
-  color: #ffffff;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-}
-
-.sidebar ul li a {
-  color: #b3b3b3;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.sidebar ul li a:hover {
-  color: #1db954;
-}
-
 /* Main Content */
 .main-content {
-  margin-left: 250px; /* Creates a gap of 20px between the sidebar and main content */
   flex: 1;
   padding: 20px;
 }
 
+/* Navigation */
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #282828;
+  background-color: #282828; 
   padding: 10px;
+  border-radius: 8px;
 }
 
 .top-nav h1 {
@@ -68,6 +36,7 @@ body {
   color: #ffffff;
 }
 
+/* Projects */
 .projects {
   display: flex;
   gap: 20px;
@@ -75,7 +44,7 @@ body {
 }
 
 .project-card {
-  background-color: #282828;
+  background-color: rgba(40, 40, 40, 0.8);
   padding: 20px;
   border-radius: 8px;
   text-align: center;
@@ -84,20 +53,50 @@ body {
   width: 200px;
 }
 
-.project-card h3, .project-card p {
+.project-card h3,
+.project-card p {
   color: #b3b3b3;
 }
 
 .project-card:hover {
-  background-color: #1db954;
+  background-color: #9c9f9ed3;
   color: #ffffff;
 }
 
-.project-card:hover h3, .project-card:hover p {
+.project-card:hover h3,
+.project-card:hover p {
   color: #ffffff;
 }
 
-/* Overlay Styles */
+/* Inline Highlighted Text */
+.inline-highlight {
+  background-color: rgba(128, 128, 128, 0.2);
+  color: #36c4e0;
+  padding: 2px 4px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+/* Download Button */
+.download-btn {
+  background-color: #1111119f;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Helvetica Neue', 'Arial', sans-serif;
+  font-size: 16px;
+  display: block;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  clear: both;
+}
+
+.download-btn:hover {
+  background-color: #9c9f9ed3;
+}
+
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -111,33 +110,37 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 11;
 }
 
 .overlay-content {
-  background-color: #282828;
-  padding: 30px; /* Increased padding for better spacing */
+  background-color: rgba(40, 40, 40, 0.9);
+  padding: 30px;
   border-radius: 8px;
-  width: 600px; /* Make the popup larger */
+  width: 600px;
   text-align: justify;
   color: #b3b3b3;
-  display: flex; /* Use Flexbox for layout */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  align-items: center;
   transform: scale(0.9);
   transition: transform 0.3s ease;
-  max-height: 80vh; /* Ensures popup doesn't overflow the screen */
-  overflow-y: auto; /* Scroll if content overflows */
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 12;
 }
 
 .overlay img {
-  width: 200px; /* Control the size of the image */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px;
+  height: auto;
   border-radius: 8px;
-  margin-left: 20px; /* Space between text and image */
+  margin-left: 20px;
 }
 
-.overlay h2, .overlay p {
+.overlay h2,
+.overlay p {
   color: #ffffff;
-  flex: 1; /* Allow text to take remaining space */
+  flex: 1;
 }
 
 .close-btn {
@@ -147,19 +150,32 @@ body {
   font-size: 30px;
   color: #ffffff;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .close-btn:hover {
-  color: #1db954;
+  color: #e03636;
 }
 
-/* Show popup smoothly */
 .overlay.active {
   opacity: 1;
   visibility: visible;
 }
 
 .overlay-content.active {
-  transform: scale(1); /* Smooth zoom-in effect */
+  transform: scale(1);
 }
 
+/* Sidebar Toggle Button */
+.toggle-btn {
+  background-color: rgba(40, 40, 40, 0.8);
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
