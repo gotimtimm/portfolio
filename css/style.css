@@ -160,3 +160,15 @@ body {
   transform: scale(1); /* Smooth zoom-in effect */
 }
 
+@media (max-width: 768px) {
+  .overlay-content {
+    width: 90%; /* Make the popup almost full-width on smaller screens */
+  }
+
+  .overlay img {
+    width: 100%; /* Make the image full-width on smaller screens */
+    float: none; /* Remove floating on small screens */
+    margin: 0 0 20px 0; /* Adjust margin for centered image */
+  }
+}
+
